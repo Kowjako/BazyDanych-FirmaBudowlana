@@ -1,4 +1,4 @@
-# Bazy Danych - Projekt Firmy Budowlanej 💿  
+# Bazy Danych — Projekt Firmy Budowlanej 💿  
 Projekt przedstawia bazę danych do biura firm budowlanych, tabela zaprojektowana zgodnie z trzecią postacią normalną. Zostały napisane i sprawdzone zapytania testowe.  
 # Składniki
 💾 Plik ``firma.sql`` — przedstawia skrypt generujący bazę danych i wypełniający tą bazę danymi.  

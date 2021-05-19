@@ -114,16 +114,17 @@ ALTER TABLE expenses ADD CONSTRAINT expenses_check1 CHECK (amount>0);
 ALTER TABLE expenses ADD CONSTRAINT expenses_company_fk FOREIGN KEY (company_id) REFERENCES company(company_id);
 ALTER TABLE expenses ADD CONSTRAINT expenses_order_fk FOREIGN KEY (order_id) REFERENCES orders(order_id);
 
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(1, 'Reynolds, Keeling and Moore', '17/11/2015', 'Warsaw', 'https://geocities.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(2, 'Greenfelder-Pagac', '21/04/2018', 'Wroclaw', 'https://chronoengine.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(3, 'Kiehn-Windler', '02/04/2016', 'Minsk', 'http://usatoday.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(4, 'Dietrich LLC', '19/09/2017', 'Moskwa', 'https://blogtalkradio.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(5, 'Kunde, Little and Quitzon', 'Vilnus', 'Lingshan', 'http://tinyurl.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(6, 'Bernhard Group', '03/07/2016', 'Stambul', 'https://smh.com.au');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(7, 'Shields, Cormier and Walter', '24/02/2016', 'Paris', 'http://usnews.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(8, 'Grady Inc', '30/06/2016', 'Los Angeles', 'http://cafepress.com');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(9, 'Erdman, Graham and Hand', '14/10/2019', 'New Jork', 'http://dion.ne.jp');
-INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(10, 'Senger-Schiller', '06/10/2018', 'St. Petersburg', 'https://1688.com');
+
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(1, 'Reynolds, Keeling and Moore', '17/11/15', 'Warsaw', 'https://geocities.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(2, 'Greenfelder-Pagac', '21/04/18', 'Wroclaw', 'https://chronoengine.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(3, 'Kiehn-Windler', '02/04/16', 'Minsk', 'http://usatoday.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(4, 'Dietrich LLC', '19/09/17', 'Moskwa', 'https://blogtalkradio.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(5, 'Kunde, Little and Quitzon', '24/06/16', 'Lingshan', 'http://tinyurl.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(6, 'Bernhard Group', '03/07/16', 'Stambul', 'https://smh.com.au');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(7, 'Shields, Cormier and Walter', '24/02/16', 'Paris', 'http://usnews.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(8, 'Grady Inc', '30/06/16', 'Los Angeles', 'http://cafepress.com');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(9, 'Erdman, Graham and Hand', '14/10/19', 'New Jork', 'http://dion.ne.jp');
+INSERT INTO company (company_id, company_name, creation_date, city, website) VALUES(10, 'Senger-Schiller', '06/10/18', 'St. Petersburg', 'https://1688.com');
 
 
 INSERT INTO operations (operation_id, operation_type, description, period_days, cost) VALUES (1, 'Roboty ziemne', 'Osadzenia fundamentów budynku', 10, 400);
@@ -385,7 +386,7 @@ CREATE TABLE logger (
 CREATE SEQUENCE logger_id MINVALUE 0 MAXVALUE 999 START WITH 0 INCREMENT BY 1;
 
 ALTER TABLE logger ADD CONSTRAINT logger_pk PRIMARY KEY (log_id);
-ALTER TABLE logger ADD CONSTANT logger_check1 CHECK (log_operation IN ('Insert', 'Update', 'Delete'));
+ALTER TABLE logger ADD CONSTRAINT logger_check1 CHECK (log_operation IN ('Insert', 'Update', 'Delete'));
 
 /* Trigger dla tabeli company */
 CREATE OR REPLACE TRIGGER COMPANY_CHANGES_TRIGGER
@@ -580,22 +581,30 @@ END;
 
 
 /* Usuwanie wszystkich tabel 
-DROP TABLE OPERATIONS;
 DROP TABLE EXPENSES;
 DROP TABLE PROFIT;
 DROP TABLE ORDERS;
-DROP TABLE PEOPLE;
 DROP TABLE PAYMENTS;
+DROP TABLE LOGGER;
 DROP TABLE COMPANY;
+DROP TABLE PEOPLE;
+DROP TABLE OPERATIONS;
 DROP TABLE WORKERS;
 DROP TABLE CLIENTS; 
-DROP SEQUENCE logger_id
-DROP TRIGGER COMPANY_CHANGES_TRIGGER
-DROP TRIGGER PAYMENTS_CHANGES_TRIGGER
-DROP TRIGGER EXPENSES_CHANGES_TRIGGER
-DROP TRIGGER PROFIT_CHANGES_TRIGGER
-DROP TRIGGER ORDERS_CHANGES_TRIGGER
-DROP TRIGGER CLIENTS_CHANGES_TRIGGER
-DROP TRIGGER WORKERS_CHANGES_TRIGGER
-DROP TRIGGER PEOPLE_CHANGES_TRIGGER
-DROP TRIGGER OPERATIONS_CHANGES_TRIGGER */
+DROP SEQUENCE logger_id;
+DROP TRIGGER COMPANY_CHANGES_TRIGGER;
+DROP TRIGGER PAYMENTS_CHANGES_TRIGGER;
+DROP TRIGGER EXPENSES_CHANGES_TRIGGER;
+DROP TRIGGER PROFIT_CHANGES_TRIGGER;
+DROP TRIGGER ORDERS_CHANGES_TRIGGER;
+DROP TRIGGER CLIENTS_CHANGES_TRIGGER;
+DROP TRIGGER WORKERS_CHANGES_TRIGGER;
+DROP TRIGGER PEOPLE_CHANGES_TRIGGER;
+DROP TRIGGER OPERATIONS_CHANGES_TRIGGER; */
+
+
+
+
+
+
+

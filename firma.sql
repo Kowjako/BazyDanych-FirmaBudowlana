@@ -408,6 +408,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Company', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli payment*/
 CREATE OR REPLACE TRIGGER PAYMENTS_CHANGES_TRIGGER
@@ -429,6 +430,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Payments', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli expenses*/
 CREATE OR REPLACE TRIGGER EXPENSES_CHANGES_TRIGGER
@@ -450,6 +452,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Expenses', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli profit */
 CREATE OR REPLACE TRIGGER PROFIT_CHANGES_TRIGGER
@@ -471,6 +474,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Profit', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli orders */
 CREATE OR REPLACE TRIGGER ORDERS_CHANGES_TRIGGER
@@ -492,6 +496,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Orders', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli clients */
 CREATE OR REPLACE TRIGGER CLIENTS_CHANGES_TRIGGER
@@ -513,6 +518,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Clients', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli workers */
 CREATE OR REPLACE TRIGGER WORKERS_CHANGES_TRIGGER
@@ -534,7 +540,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Workers', SYSDATE);
 END;
-	
+/
 
 /* Trigger dla tabeli people */
 CREATE OR REPLACE TRIGGER PEOPLE_CHANGES_TRIGGER
@@ -556,6 +562,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'People', SYSDATE);
 END;
+/
 
 /* Trigger dla tabeli operations */
 CREATE OR REPLACE TRIGGER OPERATIONS_CHANGES_TRIGGER
@@ -577,7 +584,7 @@ BEGIN
   INSERT INTO logger (log_id, log_operation, change_table, change_date)
     VALUES (logger_id.nextval, log_action, 'Operations', SYSDATE);
 END;
-
+/
 
 
 /* Usuwanie wszystkich tabel 

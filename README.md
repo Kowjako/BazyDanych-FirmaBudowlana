@@ -13,4 +13,5 @@ Projekt przedstawia bazę danych do biura firm budowlanych, tabela zaprojektowan
 🔸 Tabela ``Expenses`` — informacje odnośnie wydatków poszczególnych firm  
 🔸 Tabela ``Operations`` — informacje odnośnie typów wykonywanych robot  
 🔸 Tabela ``People`` — informacje odnośnie danych osobowych wszystkich użytkowników  
-🔸 Tabela ``Orders`` — informacje odnośnie wszystkich zamówień
+🔸 Tabela ``Orders`` — informacje odnośnie wszystkich zamówień  
+🔸 Tabela ``Payments`` — informacje odnośnie typów dokonania zapłaty

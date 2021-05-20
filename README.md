@@ -2,7 +2,8 @@
 Projekt przedstawia bazę danych do biura firm budowlanych, tabela zaprojektowana zgodnie z trzecią postacią normalną. Zostały napisane i sprawdzone zapytania testowe.  
 # Składniki
 💾 Plik ``firma.sql`` — przedstawia skrypt generujący bazę danych i wypełniający tą bazę danymi.  
-💾 Plik ``widoki.sql`` — przedstawia zapytania SQL które odpowiadają wymaganiam funkcjonalnym danej bazy danych.
+💾 Plik ``widoki.sql`` — przedstawia zapytania SQL które odpowiadają wymaganiam funkcjonalnym danej bazy danych.  
+💾 Plik ``triggery.sql`` — przedstawia skrypt generujący triggery dla wypełnienia tabeli logów. 
 # Diagram ERD 
 ![ERD](https://user-images.githubusercontent.com/19534189/118511773-860a4580-b732-11eb-9d70-5668318e9b70.png)  
 # Tabele 

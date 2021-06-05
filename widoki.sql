@@ -39,7 +39,7 @@ FROM
 FROM Company c JOIN Workers w ON (w.company_id = c.company_id)
 WHERE w.operation_id = 
 (SELECT operation_id FROM Operations WHERE description = 'Przygotowanie nawierzchni pod budowę')) tmp
-JOIN People d ON (tmp.data_id = d.people_id);
+JOIN People d ON (tmp.data_id = d.people_id)
 ORDER BY "Ilosc realizowanych zamowien" DESC;
 
 6. Zestawienie wydatków i dochodów firmy w okresie kwartału

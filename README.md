@@ -5,7 +5,7 @@ Projekt przedstawia bazę danych do biura firm budowlanych, tabela zaprojektowan
 💾 Plik ``widoki.sql`` — przedstawia zapytania SQL które odpowiadają wymaganiam funkcjonalnym danej bazy danych.  
 💾 Plik ``triggery.sql`` — przedstawia skrypt generujący triggery dla wypełnienia tabeli logów. 
 # Diagram ERD 
-![ERD](https://user-images.githubusercontent.com/19534189/118511773-860a4580-b732-11eb-9d70-5668318e9b70.png)  
+![Relational_1](https://user-images.githubusercontent.com/19534189/120900434-12729e80-c635-11eb-83c6-1ea3f9ff61ec.png)
 # Tabele 
 🔸 Tabela ``Company`` — informacje odnośnie poszczególnych firm  
 🔸 Tabela ``Workers`` — informacje odnośnie pracowników  
@@ -15,4 +15,5 @@ Projekt przedstawia bazę danych do biura firm budowlanych, tabela zaprojektowan
 🔸 Tabela ``Operations`` — informacje odnośnie typów wykonywanych robot  
 🔸 Tabela ``People`` — informacje odnośnie danych osobowych wszystkich użytkowników  
 🔸 Tabela ``Orders`` — informacje odnośnie wszystkich zamówień  
-🔸 Tabela ``Payments`` — informacje odnośnie typów dokonania zapłaty
+🔸 Tabela ``Payments`` — informacje odnośnie typów dokonania zapłaty  
+🔸 Tabela ``Logger`` — informacje odnośnie operowania nad tablicami
